@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <div id="app">
+        <Tete></Tete>
+    </div>
+<body>
+
+    <div class="main-container" id="main-container">
+        <div class="aside" id="menu">
+            <div class="logo">
+                <a href="#">I <span>Humora</span></a>
+            </div>
+            <ul class="nav">
+                <!-- A son click des emoticones d'humeur remplisse la page et il nora ka choisir -->
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Je me sens...</a></li>
+                <li v-for="menu in menus"><a :href="menu.link"><i class="fa fa-home"></i> {{menu.title}}</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            Contenu
+            <section class="home section">
+                <div class="home-title">
+                    <h2>En fonction de ton <span>Humeur</span> je me charge de trouver le </h2>
+                    <h2> <span class="big">Bon Film</span></h2>
+                    <h2>pour ta soiree. Je suis Hima mon ami! Et toi ton nom?</h2>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+    
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/isotope.pkgd.min.js"></script>
+    <script>
+        const filter_btns = document.querySelectorAll(".filter-btn");
+
+        filter_btns.forEach((btn)=> {
+        btn.addEventListener("click", () =>{
+            filter_btns.forEach((button)=> button.classList.remove("active"));
+            btn.classList.add("active");
+
+            let filterValue = btn.dataset.filter;
+
+            $(".grid").isotope({filter: filterValue});
+            
+        })
+        })
+
+        $(".grid").isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            transitionDuration: "0.6s",
+        })
+
+        
+
+
+    </script>
+</body>
+</html>

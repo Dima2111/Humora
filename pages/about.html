@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <div id="app">
+        <Tete></Tete>
+    </div>
+<body>
+
+    <div class="main-container" >
+        <div class="aside" id="menu">
+            <div class="logo">
+                <a href="#">I <span>Humora</span></a>
+            </div>
+            <ul class="nav">
+                <!-- A son click des emoticones d'humeur remplisse la page et il nora ka choisir -->
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Je me sens...</a></li>
+                <li v-for="menu in menus"><a :href="menu.link"><i class="fa fa-home"></i> {{menu.title}}</a></li>
+            </ul>
+        </div>
+        <div class="main-content" >
+            <section class="memory section ortho">
+                <div class="memory-main">
+                    <h3 class="store-title">A-propos?</h3>
+                    <div class="about">
+                        <div class="img-me">
+                        </div>
+                        <div class="info-me">
+                            <p>Nom: <span>Zanre Mahamadi</span></p>
+                            <p>Surnom: <span>Dima DarkX</span></p>
+                            <p>Tel: <a href="tel:+226 73333962"> (+226) 73 33 39 62</a></p>
+                            <p>Facebook: <a href="https://web.facebook.com/dima.zanre/">Dima Zanre</a></p>
+                            <p>Github: <a href="https://github.com/Dima2111">Dima2111</a></p>
+                            <h5 class="mini-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus magni corporis illum atque eum nemo ipsa facere incidunt, quibusdam asperiores vel earum minus amet saepe expedita voluptatibus quasi deleniti. Neque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque odio dolores corporis dolor ullam molestiae iste. Sequi quisquam, facere totam, provident voluptatibus perferendis consectetur molestias iste consequuntur ipsam expedita odit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolor eveniet reiciendis nobis. Nihil, accusamus consequuntur rerum quae culpa obcaecati ab, nisi rem nulla at autem! Ipsa, natus et? Quam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam tempora ad rerum quidem. Libero amet possimus veniam? Nesciunt ex eos dicta voluptas, facere corporis rem distinctio autem pariatur fugiat aliquam.
+                            </h5>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../../assets/js/vue.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+</html>

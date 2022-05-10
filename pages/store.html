@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <div id="app">
+        <Tete></Tete>
+    </div>
+<body>
+
+    <div class="main-container" id="main-container">
+        <div class="aside" id="menu">
+            <div class="logo">
+                <a href="#">I <span>Humora</span></a>
+            </div>
+            <ul class="nav">
+                <!-- A son click des emoticones d'humeur remplisse la page et il nora ka choisir -->
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Je me sens...</a></li>
+                <li v-for="menu in menus"><a :href="menu.link"><i class="fa fa-home"></i> {{menu.title}}</a></li>
+            </ul>
+        </div>
+        <div class="main-content" >
+            <section class="store section">
+                <div class="store-main">
+                    <h3 class="store-title">Store</h3>
+                    <div class="store-categories" id="mainA">
+                        <ul class="cat filter">
+                            <button class="filter-btn" data-filter=".Action">Action</button>
+                            <button class="filter-btn" data-filter=".Aventure">Aventure</button>
+                            <button class="filter-btn" data-filter=".Danger">Danger</button>
+                            <button class="filter-btn" data-filter=".Amour">Amour</button>
+                            <button class="filter-btn" data-filter=".Peur">Peur</button>
+                            <button class="filter-btn active" data-filter="*">Tout</button>
+                        </ul>
+                        <div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+                            <div class="grid-item Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/v.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/a.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/b.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/c.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/d.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/e.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/f.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/j.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/h.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/i.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/j.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Peur">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/k.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/l.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/m.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/n.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/o.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/p.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Peur">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/q.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/r.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/s.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/t.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/u.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Amour">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/v.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/w.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Aventure Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/aa.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/bb.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item Danger Action">
+                                <div class="gallery-image">
+                                    <img src="../assets/imgs/s.jpg" alt="">
+                                    <div class="img-overlay">
+                                        <div class="plus"></div>
+                                        <div class="img-description">
+                                            <h3>Logo Design</h3>
+                                            <h5>View Demo</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script>
+        const filter_btns = document.querySelectorAll(".filter-btn");
+
+        filter_btns.forEach((btn)=> {
+        btn.addEventListener("click", () =>{
+            filter_btns.forEach((button)=> button.classList.remove("active"));
+            btn.classList.add("active");
+
+            let filterValue = btn.dataset.filter;
+
+            $(".grid").isotope({filter: filterValue});
+            
+        })
+        })
+
+        $(".grid").isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            transitionDuration: "0.6s",
+        })
+
+        
+
+
+    </script>
+</body>
+</html>

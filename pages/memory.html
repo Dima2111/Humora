@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <div id="app">
+        <Tete></Tete>
+    </div>
+<body>
+
+    <div class="main-container" >
+        <div class="aside" id="menu">
+            <div class="logo">
+                <a href="#">I <span>Humora</span></a>
+            </div>
+            <ul class="nav">
+                <!-- A son click des emoticones d'humeur remplisse la page et il nora ka choisir -->
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Je me sens...</a></li>
+                <li v-for="menu in menus"><a :href="menu.link"><i class="fa fa-home"></i> {{menu.title}}</a></li>
+            </ul>
+        </div>
+        <div class="main-content" >
+            <section class="memory section ortho">
+                <div class="memory-main">
+                    <h3 class="store-title">Memory</h3>
+                    <div class="memory-base" id="mainA">
+                        <div class="search-content">
+                            <div class="parent-div">
+                                <button class="btn-upload" >Fichier?</button>
+                                <input type="file" name="upfile" @change="onFileChange" />
+                            </div>
+                            <input type="text" :placeholder="help" v-model="new_emotion">
+                            <input type="button" value="+" placeholder="+" @click="ajouterEmotion" style="width: 200px; cursor: pointer;">
+                            <br>
+
+                            
+                        </div>
+                        <div class="centrale">
+                            <ul class="emotions-liste">
+                                <li class="emotion" v-for="emo in emotions">
+                                    <div class="view" style="display: flex;">
+                                        <img :src="emo.img">
+                                        <input type="checkbox" v-model="emo.status">
+                                        <label>{{emo.nom}}</label>
+                                        <button @click.prevent="deleteEmotion(emo)">X</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="details">
+                            <h2> {{ reste }} emotions</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../../assets/js/vue.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+</html>
